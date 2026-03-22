@@ -1,10 +1,11 @@
 program Branching;
 uses crt;
-var a,b,vibor: integer;
+var a,b,vibor,povtor: integer; 
 begin
   a:=0;
   b:=0;
   vibor:=0;
+  povtor:=0;{ Ненужен на данный момент }
 clrscr;
 writeln('Это простейший канкулятор');
 writeln('Введи 2 числа');
@@ -18,4 +19,6 @@ if vibor=1 then writeln(a+b);
 if vibor=2 then writeln(a-b);
 if vibor=3 then writeln(a*b);
 if vibor=4 then writeln(a/b);
+if (vibor=4) and (b=0) then
+ writeln('Делить на 0 нельзя');
 end.
